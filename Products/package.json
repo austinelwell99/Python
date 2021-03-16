@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "etl": "node ETL/index.js"
+    "etl": "node ETL/index.js",
+    "start": "nodemon ./Server/index.js"
   },
   "author": "",
   "license": "ISC",
