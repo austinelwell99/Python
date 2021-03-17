@@ -51,6 +51,13 @@ paths.forEach((path, index) => {
       //features table
       if (index === 2) {
         console.log(currObj);
+
+        let features = objs[currObj.productId].features || [];
+        objs[currObj.productId].features = [
+          ...features,
+          { feature: currObj.feature, value: currObj.value },
+        ];
+        console.log('objs[currObj.productId]:', objs[currObj.productId]);
       }
 
       //styles table
