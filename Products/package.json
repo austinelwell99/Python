@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "etl": "node ETL/index.js",
+    "import": "node ETL/importData.js",
+    "clean": "node ETL/cleanPhotoData.js",
     "start": "nodemon ./Server/index.js"
   },
   "author": "",
