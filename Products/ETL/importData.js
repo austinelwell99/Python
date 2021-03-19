@@ -61,3 +61,7 @@ const photoSchema = new mongoose.Schema({
 });
 const Photo = mongoose.model('Photos', photoSchema);
 //mongoimport --collection photos --db sdc --file ETL/rawData/photos.csv --ignoreBlanks --headerline --type csv
+
+//testing with first 10 products
+// mongoimport --collection testProducts --db sdc --file ETL/rawData/testProducts.csv --ignoreBlanks --headerline --type csv
+// mongoimport --collection testStyles --db sdc --file ETL/rawData/testStyles.csv --ignoreBlanks --headerline --type csv
