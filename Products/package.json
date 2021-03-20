@@ -4,11 +4,10 @@
   "description": "Product section",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "etl": "node ETL/index.js",
     "import": "node ETL/importData.js",
     "clean": "node ETL/cleanPhotoData.js",
-    "start": "nodemon ./Server/index.js"
+    "start": "nodemon ./Server/index.js",
+    "merge": "mongo localhost:27017/sdc ETL/aggregation.js"
   },
   "author": "",
   "license": "ISC",
