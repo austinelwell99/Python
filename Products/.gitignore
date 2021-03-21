@@ -5,3 +5,6 @@ node_modules
 
 #KEY
 *.pem
+
+#Database archive file
+*.archive
