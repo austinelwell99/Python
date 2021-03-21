@@ -2,3 +2,9 @@ node_modules
 
 #raw data
 *.csv
+
+#KEY
+*.pem
+
+#Database archive file
+*.archive
