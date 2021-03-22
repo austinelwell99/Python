@@ -5,11 +5,7 @@ const mongoose = require('mongoose');
 //   useUnifiedTopology: true,
 // });
 
-var MongoDB = mongoose.connect('mongodb://172.31.14.203:27017/sdc',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }).connection
+var MongoDB = mongoose.connect('mongodb://172.31.14.203:27017/sdc').connection
 MongoDB.on('error', function(err) { console.log(err.message); });
 MongoDB.once('open', function() {
   console.log("mongodb connection open");
