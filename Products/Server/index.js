@@ -3,7 +3,7 @@ const express = require('express');
 
 const app = express();
 const port = 3000;
-const db = require('../Database/index.js');
+const db = require('../Database/Index.js');
 
 app.use(express.json())
 
