@@ -8,7 +8,6 @@ const db = require('../Database/Index.js');
 app.use(express.json())
 
 app.get('/products', (req, res) => {
-  console.log(req.query)
   const count = req.query?.count || 5
   const skip = (req.query?.page || 1) * count - count
   return db.sendAll(count, skip)
