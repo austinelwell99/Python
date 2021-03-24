@@ -49,7 +49,7 @@ const productSchema = mongoose.Schema({
 const Product = mongoose.model('Product', productSchema);
 
 const sendAll = (count, skip) => {
-  return Product.find({}).limit(count).skip(skip);
+  return Product.find({id: {$gte: skip, $lte: skip+count}}).hint({ id : 1 });
 };
 
 const sendOne = (idIn) => {
