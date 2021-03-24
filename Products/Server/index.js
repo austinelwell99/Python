@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 const express = require('express');
+require('newrelic');
 
 const app = express();
 const port = 3000;
