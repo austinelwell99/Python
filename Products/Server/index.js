@@ -7,6 +7,10 @@ const db = require('../Database/Index.js');
 
 app.use(express.json())
 
+app.get('/loaderio-f7c1ec2cc03cd88c33291a56d025ac68', (req, res) => {
+  res.send('loaderio-f7c1ec2cc03cd88c33291a56d025ac68').status(200)
+})
+
 app.get('/products', (req, res) => {
   let count = req.query?.count|| 5
   if (count > 500) count = 500
