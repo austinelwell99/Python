@@ -8,8 +8,8 @@ const db = require('../Database/Index.js');
 
 app.use(express.json())
 
-app.get('/loaderio-f7c1ec2cc03cd88c33291a56d025ac68', (req, res) => {
-  res.send('loaderio-f7c1ec2cc03cd88c33291a56d025ac68').status(200)
+app.get('/loaderio-916a115cdd94115672903b94e82f4b5f', (req, res) => {
+  res.send('loaderio-916a115cdd94115672903b94e82f4b5f').status(200)
 })
 
 app.get('/products', (req, res) => {
