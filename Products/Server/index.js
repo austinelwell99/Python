@@ -16,7 +16,7 @@ app.get('/products', (req, res) => {
   let count = req.query?.count|| 5
   if (count > 500) count = 500
   const skip = (req.query?.page || 1) * count - count
-  return db.sendAll(count, skip)
+  db.sendAll(count, skip)
     .then(data => {
       const output = []
       data.forEach(curr => {
@@ -24,9 +24,9 @@ app.get('/products', (req, res) => {
         shaped.default_price = shaped.default_price.toString()
         output.push(shaped)
       })
-      res.send(output).status(200)
+      res.status(200).send(output)
     })
-    .catch(err => res.send(err).status(500))
+    .catch(err => res.status(500).send(err))
 });
 
 app.get('/products/:product_id', (req, res) => {
