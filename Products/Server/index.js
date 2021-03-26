@@ -13,6 +13,7 @@ app.get('/loaderio-67921d4cb8f53beee31643c5f638e905', (req, res) => {
 })
 
 app.get('/products', (req, res) => {
+  console.log('requested')
   let count = req.query?.count|| 5
   if (count > 500) count = 500
   const skip = (req.query?.page || 1) * count - count
